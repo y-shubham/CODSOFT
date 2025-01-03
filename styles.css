@@ -1,0 +1,121 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #282c34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.heading h1 {
+    font-size: 3rem;
+    background: linear-gradient(45deg, #ff6ec7, #f7f48b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+
+    100% {
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6);
+    }
+}
+
+
+.calculator {
+    background: #1e1e1e;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 280px;
+    padding: 15px;
+    text-align: center;
+}
+
+
+.display {
+    background: #111;
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    height: 50px;
+    overflow-x: auto;
+    text-align: right;
+    word-wrap: break-word;
+}
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.btn {
+    background: #333;
+    color: white;
+    font-size: 1.4rem;
+    border: none;
+    padding: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.c{
+    background-color: orange;
+    color :rgb(0, 0, 0)
+}
+
+.btn:hover {
+    background: #555;
+}
+
+.c:hover {
+    background: #a87f16;
+}
+
+.btn:active {
+    background: #777;
+}
+
+.c:active {
+    background: #777;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%;
+    }
+
+    .display {
+        font-size: 1.4rem;
+        height: 45px;
+    }
+}
